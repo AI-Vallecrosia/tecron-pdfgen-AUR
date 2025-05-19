@@ -10,7 +10,7 @@
 pkgname=tecron-pdfgen-git # '-bzr', '-git', '-hg' or '-svn'
 pkgver=v0.0.3.r1.ecf583a
 pkgrel=3
-pkgdesc=""
+pkgdesc="Python helper for downloading pdf documents for people working in Tecrom"
 arch=(x86_64)
 url=""
 license=('GPL')

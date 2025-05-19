@@ -9,7 +9,7 @@
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=tecron-pdfgen-git # '-bzr', '-git', '-hg' or '-svn'
 pkgver=v0.0.3.r1.ecf583a
-pkgrel=1
+pkgrel=2
 pkgdesc=""
 arch=(x86_64)
 url=""
@@ -35,6 +35,7 @@ depends=(
 	python-pypdf2 
 	python-requests
     python-beautifulsoup4
+	tk
 )
 sha256sums=('SKIP')
 
@@ -65,7 +66,7 @@ package() {
 	python -m installer --destdir="$pkgdir" dist/*.whl
     install -Dm644 "tecron-genpdf.desktop" -t "$pkgdir/usr/share/applications/"
 	for size in 16 32 48 64 128; do
-    	if [ -f "assets/icon-${size}x${size}.png" ]; then
+    	if [ -f "assets/tecron-genpdf_${size}x${size}.png" ]; then
       		install -Dm644 "assets/tecron-genpdf_${size}x${size}.png" \
         	"$pkgdir/usr/share/icons/hicolor/${size}x${size}/apps/tecron-pdfgen.png"
     	fi

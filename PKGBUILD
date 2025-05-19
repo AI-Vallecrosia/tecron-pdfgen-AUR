@@ -9,7 +9,7 @@
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=tecron-pdfgen-git # '-bzr', '-git', '-hg' or '-svn'
 pkgver=v0.0.1.r1.91cc614
-pkgrel=2
+pkgrel=3
 pkgdesc=""
 arch=(x86_64)
 url=""
@@ -28,7 +28,7 @@ depends=(
 	python-playwright 
 	python-pypdf2 
 	python-requests
-    python-bs4
+    python-beautifulsoup4
 )
 sha256sums=('SKIP')
 

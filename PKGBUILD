@@ -8,8 +8,8 @@
 
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=tecron-pdfgen-git # '-bzr', '-git', '-hg' or '-svn'
-pkgver=v0.0.1.r1.91cc614
-pkgrel=4
+pkgver=v0.0.3.r0.db795ed
+pkgrel=1
 pkgdesc=""
 arch=(x86_64)
 url=""

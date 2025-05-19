@@ -1,6 +1,6 @@
 pkgbase = tecron-pdfgen-git
-	pkgver = v0.0.1.r1.91cc614
-	pkgrel = 4
+	pkgver = v0.0.3.r1.ecf583a
+	pkgrel = 1
 	url = https://www.aivallecrosia.com
 	arch = x86_64
 	license = GPL

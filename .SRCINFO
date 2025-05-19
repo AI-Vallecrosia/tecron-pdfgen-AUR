@@ -1,0 +1,21 @@
+pkgbase = tecron-pdfgen-git
+	pkgver = v0.0.1.r1.91cc614
+	pkgrel = 1
+	url = https://www.aivallecrosia.com
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python-playwright
+	depends = python-pypdf2
+	depends = python-requests
+	depends = python-bs4
+	provides = tecron-pdfgen-git
+	conflicts = tecron-pdfgen-git
+	source = git+https://github.com/AI-Vallecrosia/tecron-pdfgen.git
+	sha256sums = SKIP
+
+pkgname = tecron-pdfgen-git

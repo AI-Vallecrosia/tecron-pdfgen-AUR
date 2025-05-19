@@ -8,7 +8,7 @@
 
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=tecron-pdfgen-git # '-bzr', '-git', '-hg' or '-svn'
-pkgver=v0.0.3.r0.db795ed
+pkgver=v0.0.3.r1.ecf583a
 pkgrel=1
 pkgdesc=""
 arch=(x86_64)
@@ -70,7 +70,11 @@ package() {
         	"$pkgdir/usr/share/icons/hicolor/${size}x${size}/apps/tecron-pdfgen.png"
     	fi
   	done
-	DATA_DIR="${$XDG_DATA_HOME:-$HOME/.local/share}"
+	if [ -z "${XDG_DATA_HOME}" ]; then
+		DATA_DIR="${HOME}/.local/share"
+	else 
+		DATA_DIR="${XDG_DATA_HOME}"
+	fi
 	if [ ! -d "$DATA_DIR/tecron_pdfgen" ]; then
 		mkdir -p "$DATA_DIR/tecron_pdfgen"
 	fi

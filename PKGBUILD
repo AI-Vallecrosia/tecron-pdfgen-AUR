@@ -14,7 +14,13 @@ pkgdesc=""
 arch=(x86_64)
 url=""
 license=('GPL')
-makedepends=(git python-build python-installer python-wheel python-setuptools) # 'bzr', 'git', 'mercurial' or 'subversion'
+makedepends=(
+	git 
+	python-build 
+	python-installer 
+	python-wheel 
+	python-setuptools
+) # 'bzr', 'git', 'mercurial' or 'subversion'
 provides=("${pkgname%-VCS}")
 conflicts=("${pkgname%-VCS}")
 replaces=()

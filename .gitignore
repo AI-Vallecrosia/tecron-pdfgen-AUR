@@ -1,3 +1,4 @@
 pkg/
 src/
 tecron-pdfgen/
+*.pkg.tar.zst

@@ -9,7 +9,7 @@
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=tecron-pdfgen-git # '-bzr', '-git', '-hg' or '-svn'
 pkgver=v0.0.1.r1.91cc614
-pkgrel=1
+pkgrel=2
 pkgdesc=""
 arch=(x86_64)
 url=""
@@ -58,5 +58,18 @@ package() {
 	cd "$srcdir/tecron-pdfgen"
 	python -m installer --destdir="$pkgdir" dist/*.whl
     install -Dm644 "tecron-genpdf.desktop" -t "$pkgdir/usr/share/applications/"
-
+	for size in 16 32 48 64 128; do
+    	if [ -f "assets/icon-${size}x${size}.png" ]; then
+      		install -Dm644 "assets/tecron-genpdf_${size}x${size}.png" \
+        	"$pkgdir/usr/share/icons/hicolor/${size}x${size}/apps/tecron-pdfgen.png"
+    	fi
+  	done
+	DATA_DIR="${$XDG_DATA_HOME:-$HOME/.local/share}"
+	if [ ! -d "$DATA_DIR/tecron_pdfgen" ]; then
+		mkdir -p "$DATA_DIR/tecron_pdfgen"
+	fi
+	if [ ! -f "$DATA_DIR/tecron_pdfgen/password.secret" ]; then
+		touch "$DATA_DIR/tecron_pdfgen/password.secret"
+		chmod 600 "$DATA_DIR/tecron_pdfgen/password.secret"
+	fi	
 }
